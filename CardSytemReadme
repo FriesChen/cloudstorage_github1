@@ -1,0 +1,41 @@
+# 因为使用宝塔面板的小白众多，通常不觉得麻烦的非小白通常会自己搭建环境，使用脚本、手动搭建、Docker、K8S 等，所以宝塔面板为了让小白用户的网站也能获得到一定的安全性，又怕小白不会设置，默认会禁用一些函数。那么我们需要移除 Laravel 框架所需要使用且被宝塔面板默认禁用掉的 PHP 函数，以防因为函数被禁用而导致程序运行异常。
+
+你可以删除宝塔面板对应 PHP 版本的函数禁用里面的所有函数，当然，这是不被推荐的！你可以移除掉下面列出的函数或是在后续的报错中将报错的函数移除掉。
+
+Laravel 需要的危险 PHP 函数有：
+
+exec
+passthru
+system
+popen
+proc_open
+shell_exec
+pcntl_exec
+eval
+preg_replace
+create_function
+show_source
+ini_set
+highlight_file
+putenv
+
+
+Laravel 需要的基础 PHP 函数:
+
+
+mbstring
+tokenizer
+openssl
+JSON
+ctype
+BCMath
+GD
+PDO
+XML
+fileinfo
+iconv
+curl
+exif
+zip
+FTP
+Phar
